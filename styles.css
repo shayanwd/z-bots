@@ -1,0 +1,646 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.container-holder {
+    display: grid;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    grid-template-columns: 1fr 0.82fr;
+}
+
+.prop-types-menu-section {
+    flex: 1 1 400px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.prop-types-menu-item {
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 30px 40px;
+    border: 1px solid #7D3986 !important;
+    border-radius: 24px;
+}
+
+.prop-types-menu-item-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.prop-types-menu-item img.prop-types-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    filter: brightness(0);
+    transition: all 0.3s ease;
+}
+
+.prop-types-menu-item:hover img.prop-types-icon {
+    filter: brightness(1);
+}
+
+.prop-types-menu-item h2 {
+    font-size: clamp(24px, 3vw, 39px);
+    color: #3D3D3D;
+    font-weight: 600;
+    margin: 0 !important;
+    font-family: "Outfit", Sans-serif;
+}
+
+.prop-types-arrow-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.prop-types-arrow-icon svg {
+    width: 40px;
+    fill: black;
+    height: 40px;
+    filter: brightness(0);
+    transition: all 0.3s ease;
+    transform: rotate(45deg);
+}
+
+.prop-types-menu-item:hover .prop-types-arrow-icon svg {
+    filter: brightness(1);
+    transform: rotate(0deg);
+}
+
+.prop-types-menu-item:hover .prop-types-arrow-icon {
+    transform: translateX(5px);
+}
+
+.prop-types-menu-item:hover h2 {
+    color: #0081B5;
+}
+
+.prop-types-image-section {
+    flex: 1 1 500px;
+    /* min-height: 600px; */
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.prop-types-image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+
+    transition: all 0.5s ease;
+}
+
+.prop-types-menu-item.active {
+    background: #7d3986;
+}
+
+svg.prop-types-icon {
+    height: 80px;
+    width: 80px;
+}
+
+.ct-wrap {
+    flex: 1;
+}
+
+.ct-wrap h3 {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 40px;
+    letter-spacing: 0px;
+    color: #7D3986;
+}
+
+.ct-wrap p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    color: #7D3986;
+}
+
+svg.prop-types-icon path {
+    fill: #7D3986;
+}
+
+.prop-types-menu-item.active svg.prop-types-icon path {
+    fill: #fff;
+}
+
+.prop-types-menu-item.active .ct-wrap :is(h3, p) {
+    color: #fff;
+}
+
+.smarter-sec {
+    background-color: #320C37;
+    background-image: url(assets/images/prtn.png);
+    padding: 80px 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.smarter-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 47%;
+    gap: 40px;
+    align-items: center;
+}
+
+.smarter-content-left h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+.smarter-content-left p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    opacity: 0.9;
+}
+
+.btn-apply {
+    display: block;
+    padding: 16px 32px;
+    border: 1px solid #A53FBA;
+    color: white;
+    text-decoration: none;
+    border-radius: 58px;
+    transition: all 0.3s ease;
+    width: fit-content;
+    min-width: 252px;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: -0.74px;
+    text-align: center;
+}
+
+.btn-apply:hover {
+    background: #9A4AA4;
+    transform: translateY(-2px);
+}
+
+/* Slider Styles */
+.smarter-slider-right {
+    position: relative;
+}
+
+.smarter-swiper {
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.slide-content {
+    background: rgba(125, 57, 134, 0.1);
+    border-radius: 24px;
+    padding: 32px;
+}
+
+.slide-img {
+    margin-bottom: 24px;
+}
+
+.slide-img img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.slide-text h3 {
+    font-size: 30px;
+    margin-bottom: 16px;
+    color: #A53FBA;
+    font-weight: 600;
+    max-width: 300px;
+}
+
+.slide-text p {
+    font-size: 16px;
+    line-height: 27px;
+    color: white;
+    max-width: 330px;
+}
+
+/* Swiper Navigation */
+.swiper-navigation {
+    position: absolute;
+    right: 0;
+    top: -80px;
+    display: flex;
+    gap: 16px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: static;
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    background: rgba(125, 57, 134, 0.2);
+    border-radius: 50%;
+}
+
+.smarter-swiper .swiper-button-next::after,
+.smarter-swiper .swiper-button-prev::after {
+    display: none;
+}
+
+.smarter-swiper .swiper-button-next,
+.smarter-swiper .swiper-button-prev {
+    padding: 10px;
+    border: 1px solid #A53FBA26;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px;
+    color: #7D3986;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: rgba(125, 57, 134, 0.3);
+}
+
+.smarter-swiper {
+    overflow: visible;
+}
+
+.smarter-swiper .swiper-slide {
+    transition: all 0s;
+}
+
+.smarter-swiper .swiper-slide:has(~ .swiper-slide-active),
+.smarter-swiper .swiper-slide-prev {
+    opacity: 0;
+}
+
+.smarter-swiper::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -80px;
+    bottom: -20px;
+    width: 150px;
+    background: linear-gradient(to right, #320C37, #320C37 50%, #ffffff00);
+    z-index: 7;
+}
+
+
+.slide-content {
+    border: 1px solid #7d39865c;
+}
+
+.smarter-sec::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    width: 100px;
+    background: linear-gradient(to left, #320C37 40%, #ffffff00);
+    z-index: 7;
+}
+
+.smarter-content-left {
+    position: relative;
+    z-index: 7;
+}
+
+/* Best Traders Section */
+.best-traders {
+    background-color: #320C37;
+    background-image: url(assets/images/prtn.png);
+    padding: 0px 0px 100px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.traders-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+}
+
+.traders-content h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.traders-features {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 40px;
+    width: 165%;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(165, 63, 186, 0.1);
+    border: 1px solid rgba(165, 63, 186, 0.3);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background: rgba(165, 63, 186, 0.2);
+    transform: translateX(5px);
+}
+
+.feature-icon {
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.feature-text h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+}
+
+.traders-image {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.traders-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 24px;
+    transition: transform 0.3s ease;
+}
+
+.traders-image:hover img {
+    transform: scale(1.05);
+}
+
+.best-traders .btn-apply {
+    margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.smarter-sec.abt-sec {
+    color: #320C37;
+    background-color: #fff;
+}
+
+.smarter-sec.abt-sec::before {
+    display: none;
+}
+
+.smarter-swiper.abt-swiper::before {
+    display: none;
+}
+
+.abt-content svg {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 45px;
+}
+
+.abt-content b {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 56px;
+    letter-spacing: -0.9px;
+    text-transform: capitalize;
+    display: block;
+    text-align: center;
+}
+
+.abt-content p {
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 44px;
+    max-width: 460px;
+    text-align: center;
+    color: #555770;
+    margin: 0 auto;
+}
+
+.team-member {
+    border-radius: 24px;
+}
+
+.member-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 580/501;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+    border-radius: 24px;
+}
+
+.team-member:hover .member-image img {
+    transform: scale(0.98) skewX(-1deg);
+}
+
+.member-info {
+    padding: 30px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
+}
+
+.member-info h3 {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 13px;
+    line-height: 100%;
+    grid-column: span 2;
+}
+
+.member-info p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #A53FBA;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(165, 63, 186, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+.social-link:hover {
+    background: rgba(165, 63, 186, 0.2);
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .traders-content h2 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 991px) {
+    .traders-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .traders-content h2 {
+        font-size: 36px;
+    }
+
+    .traders-image {
+        order: -1;
+    }
+}
+
+@media (max-width: 576px) {
+    .best-traders {
+        padding: 60px 0;
+    }
+
+    .traders-content h2 {
+        font-size: 28px;
+    }
+
+    .feature-item {
+        padding: 16px;
+    }
+
+    .feature-text h3 {
+        font-size: 18px;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .smarter-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .smarter-content-left h2 {
+        font-size: 36px;
+    }
+
+    .swiper-navigation {
+        top: auto;
+        bottom: -80px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+
+@media (max-width: 576px) {
+    .smarter-content-left h2 {
+        font-size: 28px;
+    }
+
+    .slide-content {
+        padding: 24px;
+    }
+}
